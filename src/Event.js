@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+
+import './Event.css';
 
 class Event extends Component {
   state = {
@@ -22,31 +25,31 @@ class Event extends Component {
     //const dateTime = moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a');
 
     return (
-      <div>
-        <h1 className="summary">{event.summary}</h1>
-        <h2 className="date-time">{event.start.dateTime}</h2>
-        <p className="location">{event.location}</p>
+      <Card bg="light">
+        <Card.Title className="summary">{event.summary}</Card.Title>
+        <Card.Subtitle className="date-time">{event.start.dateTime}</Card.Subtitle>
+        <Card.Text className="location">{event.location}</Card.Text>
 
         {this.state.show === false && (
-          <div>
+          <Card.Text>
             <button
               className="show details-btn"
               onClick={() => this.handleClick()}>
               Show details
             </button>
-          </div>
+          </Card.Text>
         )}
 
         {this.state.show === true && (
-          <div className="details">{event.description}
+          <Card.Text className="details">{event.description}
             <br />
             <button
               className="less btn-text"
               onClick={() => this.showLess()}>Hide details</button>
-          </div>
+          </Card.Text>
         )}
 
-      </div>
+      </Card>
     )
   }
 }
