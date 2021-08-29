@@ -1,43 +1,46 @@
 import React, { Component } from 'react';
 
 class CitySearch extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      query: '',
-      suggestions: []
-    }
+  state = {
+    query: '',
+    suggestions: [],
+    showSuggestions: undefined
   }
 
   handleInputChanged = (event) => {
     const value = event.target.value;
+    this.setState({ showSuggestions: true });
     const suggestions = this.props.locations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     });
-    this.setState({
+
+    return this.setState({
       query: value,
       suggestions,
-      showSuggestions: undefined
+
     });
   };
 
   handleItemClicked = (suggestion) => {
     this.setState({
       query: suggestion,
-      showSuggestions: false
+      suggestions: [],
+      showSuggestions: false,
+
     });
 
-    this.props.updateEvents(suggestion);
+    this.props.updateEvents(suggestion, this.props.numberOfEvents);
   }
 
   render() {
     return (
       <div className="CitySearch">
+
         <input
           type="text"
           className="city"
           value={this.state.query}
+          placeholder="Search Cities"
           onChange={this.handleInputChanged}
           onFocus={() => { this.setState({ showSuggestions: true }) }}
         />
@@ -45,12 +48,14 @@ class CitySearch extends Component {
           {this.state.suggestions.map((suggestion) => (
             <li
               key={suggestion}
-              onClick={() => this.handleItemClicked(suggestion)}
-            >{suggestion}</li>
+              onClick={() => this.handleItemClicked(suggestion)}>
+              {suggestion}
+            </li>
           ))}
-          <li onClick={() => this.handleItemClicked("all")}>
+          <li onClick={() => this.handleItemClicked('all')} key='all'>
             <b>See all cities</b>
           </li>
+
         </ul>
       </div>
     );
