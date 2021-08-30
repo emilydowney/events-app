@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as atatus from 'atatus-spa'
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+
+atatus.config('9e544da2b7fb4c38a2dc13aae3a2e062').install();
 
 ReactDOM.render(
   <React.StrictMode>
