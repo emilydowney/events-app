@@ -3,6 +3,8 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents.js';
 import { extractLocations, getEvents } from './api';
+import Logo from './event.png';
+import { Container, Col, Row } from 'react-bootstrap';
 
 import './nprogress.css';
 import './App.css';
@@ -57,14 +59,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CitySearch
-          locations={this.state.locations} updateEvents={this.updateEvents}
-          numberOfEvents={this.state.numberOfEvents} />
+        <div md="6" className="header">
+          <img src={Logo} className="logo" alt="Logo"></img>
+          <CitySearch
+            locations={this.state.locations} updateEvents={this.updateEvents}
+            numberOfEvents={this.state.numberOfEvents} />
+        </div>
+
         <NumberOfEvents
           numberOfEvents={this.state.numberOfEvents}
           changeCount={this.changeCount} />
+
+
         <EventList
           events={this.state.events} />
+
       </div>
     );
   }

@@ -24,6 +24,16 @@ p {
   margin: 5px 0;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 300px;
+}
+
 .display-none {
   display: none;
 }
@@ -45,17 +55,13 @@ input[type="number"],
   margin: 5px;
 }
 
-.city {
-  width: 250px;
+.header {
+  display: flex;
+  align-items: flex-end;
 }
 
-.CitySearch {
-  display: inline-block;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  flex-basis: 300px;
-  max-width: 300px;
-  position: relative;
+.city {
+  width: 250px;
 }
 
 .Alert {
@@ -70,7 +76,6 @@ input[type="number"],
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -129,15 +134,6 @@ button {
   font-size: 14px;
 }
 
-.going,
-.visibility {
-  font-style: italic;
-}
-
-.description {
-  overflow-x: hidden;
-}
-
 .button-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -146,9 +142,19 @@ button {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: fixed;
-  top: 20px;
+.alert {
+  max-width: 250px;
+  font-size: 11px;
+}
+
+.number {
+  width: 50px;
+}
+
+div#numberInput.input-group {
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 .data-vis-wrapper {

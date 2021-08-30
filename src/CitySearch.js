@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { InfoAlert } from './Alert';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 class CitySearch extends Component {
   state = {
@@ -42,17 +44,17 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
-
-        <InfoAlert text={this.state.infoText} />
-
-        <input
-          type="text"
-          className="city"
-          value={this.state.query}
-          placeholder="Search Cities"
-          onChange={this.handleInputChanged}
-          onFocus={() => { this.setState({ showSuggestions: true }) }}
-        />
+        <InputGroup>
+          <InfoAlert text={this.state.infoText} />
+          <Form.Control
+            type="text"
+            className="city"
+            value={this.state.query}
+            placeholder="Search Cities"
+            onChange={this.handleInputChanged}
+            onFocus={() => { this.setState({ showSuggestions: true }) }}
+          />
+        </InputGroup>
         <ul className="suggestions" style={this.state.showSuggestions ? {} : { display: 'none' }}>
           {this.state.suggestions.map((suggestion) => (
             <li
