@@ -4,7 +4,6 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents.js';
 import { extractLocations, getEvents } from './api';
 import Logo from './event.png';
-import { Container, Col, Row } from 'react-bootstrap';
 
 import './nprogress.css';
 import './App.css';
