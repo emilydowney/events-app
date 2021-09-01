@@ -34,12 +34,19 @@ const checkToken = async (accessToken) => {
   return result;
 };
 
+// Function to get calendar events
 export const getEvents = async () => {
   NProgress.start();
 
   if (window.location.href.startsWith("http://localhost")) {
     NProgress.done();
     return mockData;
+  }
+
+  if (!navigator.onLine) {
+    const data = localStorage.getItem("lastEvents");
+    NProgress.done();
+    return data ? JSON.parse(events).events : [];
   }
 
   const token = await getAccessToken();
@@ -54,6 +61,7 @@ export const getEvents = async () => {
       localStorage.setItem("locations", JSON.stringify(locations));
     }
     NProgress.done();
+
     return result.data.events;
   }
 };
