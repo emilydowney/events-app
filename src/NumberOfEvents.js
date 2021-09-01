@@ -35,6 +35,7 @@ class NumberOfEvents extends Component {
       <InputGroup id="numberInput">
 
         <ErrorAlert text={this.state.errorText} />
+        <Form.Label className="number-label">Number of Events:</Form.Label><br />
         <Form.Control
           className="number"
           type="number"

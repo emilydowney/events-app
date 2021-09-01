@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 :root {
-  --primary-color: #60c4b0;
-  --secondary-color: #373b44;
+  --primary-color: #211749;
+  --secondary-color: #EC426B;
+  --tertiary-color: #F46A5F;
 }
 
 .App {
@@ -55,11 +56,6 @@ input[type="number"],
   margin: 5px;
 }
 
-.header {
-  display: flex;
-  align-items: flex-end;
-}
-
 .city {
   width: 250px;
 }
@@ -72,10 +68,9 @@ input[type="number"],
 
 .suggestions {
   width: 250px;
-  position: absolute;
   z-index: 2;
   align-self: center;
-  margin: 0;
+  margin: 0 auto;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -93,7 +88,7 @@ input[type="number"],
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: var(--tertiary-color);
 }
 
 .event {
@@ -113,6 +108,7 @@ button {
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
+  border-width: 0px;
   outline: none;
   background-color: var(--secondary-color);
   color: #fff;
@@ -148,12 +144,15 @@ button {
 }
 
 .number {
-  width: 50px;
+  width: 150px;
+}
+
+.number-label {
+  color: #fff;
 }
 
 div#numberInput.input-group {
-  text-align: left;
-  margin-left: 50px;
+  text-align: center;
   margin-bottom: 10px;
 }
 

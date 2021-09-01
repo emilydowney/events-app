@@ -3,7 +3,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents.js';
 import { extractLocations, getEvents } from './api';
-import Logo from './event.png';
+import Logo from './eventlogo.png';
 
 import './nprogress.css';
 import './App.css';
@@ -60,10 +60,12 @@ class App extends Component {
       <div className="App">
         <div md="6" className="header">
           <img src={Logo} className="logo" alt="Logo"></img>
-          <CitySearch
-            locations={this.state.locations} updateEvents={this.updateEvents}
-            numberOfEvents={this.state.numberOfEvents} />
         </div>
+
+        <CitySearch
+          locations={this.state.locations} updateEvents={this.updateEvents}
+          numberOfEvents={this.state.numberOfEvents} />
+
 
         <NumberOfEvents
           numberOfEvents={this.state.numberOfEvents}
