@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/events-app/static/css/main.7f8e1bf9.chunk.css",
-    "main.js": "/events-app/static/js/main.6a265ff1.chunk.js",
-    "main.js.map": "/events-app/static/js/main.6a265ff1.chunk.js.map",
-    "runtime-main.js": "/events-app/static/js/runtime-main.773dc409.js",
-    "runtime-main.js.map": "/events-app/static/js/runtime-main.773dc409.js.map",
-    "static/js/2.e77537c0.chunk.js": "/events-app/static/js/2.e77537c0.chunk.js",
-    "static/js/2.e77537c0.chunk.js.map": "/events-app/static/js/2.e77537c0.chunk.js.map",
-    "static/js/3.784f6c74.chunk.js": "/events-app/static/js/3.784f6c74.chunk.js",
-    "static/js/3.784f6c74.chunk.js.map": "/events-app/static/js/3.784f6c74.chunk.js.map",
+    "main.css": "/events-app/static/css/main.f00625cd.chunk.css",
+    "main.js": "/events-app/static/js/main.684db48a.chunk.js",
+    "main.js.map": "/events-app/static/js/main.684db48a.chunk.js.map",
+    "runtime-main.js": "/events-app/static/js/runtime-main.b2788f01.js",
+    "runtime-main.js.map": "/events-app/static/js/runtime-main.b2788f01.js.map",
+    "static/js/2.1d9592be.chunk.js": "/events-app/static/js/2.1d9592be.chunk.js",
+    "static/js/2.1d9592be.chunk.js.map": "/events-app/static/js/2.1d9592be.chunk.js.map",
+    "static/js/3.32458c52.chunk.js": "/events-app/static/js/3.32458c52.chunk.js",
+    "static/js/3.32458c52.chunk.js.map": "/events-app/static/js/3.32458c52.chunk.js.map",
     "index.html": "/events-app/index.html",
     "service-worker.js": "/events-app/service-worker.js",
     "service-worker.js.map": "/events-app/service-worker.js.map",
-    "static/css/main.7f8e1bf9.chunk.css.map": "/events-app/static/css/main.7f8e1bf9.chunk.css.map",
-    "static/js/2.e77537c0.chunk.js.LICENSE.txt": "/events-app/static/js/2.e77537c0.chunk.js.LICENSE.txt",
-    "static/media/eventlogo.b1797d68.png": "/events-app/static/media/eventlogo.b1797d68.png"
+    "static/css/main.f00625cd.chunk.css.map": "/events-app/static/css/main.f00625cd.chunk.css.map",
+    "static/js/2.1d9592be.chunk.js.LICENSE.txt": "/events-app/static/js/2.1d9592be.chunk.js.LICENSE.txt",
+    "static/media/eventlogo.b1797d68.png": "/events-app/static/media/eventlogo.b1797d68.png",
+    "static/media/WelcomeScreen.css": "/events-app/static/media/welcome.19d04155.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.773dc409.js",
-    "static/js/2.e77537c0.chunk.js",
-    "static/css/main.7f8e1bf9.chunk.css",
-    "static/js/main.6a265ff1.chunk.js"
+    "static/js/runtime-main.b2788f01.js",
+    "static/js/2.1d9592be.chunk.js",
+    "static/css/main.f00625cd.chunk.css",
+    "static/js/main.684db48a.chunk.js"
   ]
 }
