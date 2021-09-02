@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/events-app/static/css/main.810a6791.chunk.css",
-    "main.js": "/events-app/static/js/main.4ad3d5e2.chunk.js",
-    "main.js.map": "/events-app/static/js/main.4ad3d5e2.chunk.js.map",
+    "main.css": "/events-app/static/css/main.7f8e1bf9.chunk.css",
+    "main.js": "/events-app/static/js/main.6a265ff1.chunk.js",
+    "main.js.map": "/events-app/static/js/main.6a265ff1.chunk.js.map",
     "runtime-main.js": "/events-app/static/js/runtime-main.773dc409.js",
     "runtime-main.js.map": "/events-app/static/js/runtime-main.773dc409.js.map",
     "static/js/2.e77537c0.chunk.js": "/events-app/static/js/2.e77537c0.chunk.js",
@@ -12,14 +12,14 @@
     "index.html": "/events-app/index.html",
     "service-worker.js": "/events-app/service-worker.js",
     "service-worker.js.map": "/events-app/service-worker.js.map",
-    "static/css/main.810a6791.chunk.css.map": "/events-app/static/css/main.810a6791.chunk.css.map",
+    "static/css/main.7f8e1bf9.chunk.css.map": "/events-app/static/css/main.7f8e1bf9.chunk.css.map",
     "static/js/2.e77537c0.chunk.js.LICENSE.txt": "/events-app/static/js/2.e77537c0.chunk.js.LICENSE.txt",
     "static/media/eventlogo.b1797d68.png": "/events-app/static/media/eventlogo.b1797d68.png"
   },
   "entrypoints": [
     "static/js/runtime-main.773dc409.js",
     "static/js/2.e77537c0.chunk.js",
-    "static/css/main.810a6791.chunk.css",
-    "static/js/main.4ad3d5e2.chunk.js"
+    "static/css/main.7f8e1bf9.chunk.css",
+    "static/js/main.6a265ff1.chunk.js"
   ]
 }
