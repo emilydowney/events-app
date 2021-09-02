@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #211749;
+  --secondary-color: #EC426B;
+  --tertiary-color: #F46A5F;
+}
+
+a {
+  color: #fff;
+}
+
+h2 {
+  font-size: 28px;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.WelcomeScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-image: url('./welcome.png') ;
+ /* background: var(--primary-color); */
+  color: #fff;
+  }
+
+.login {
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 30px;
+  opacity: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  }
+
+  .login-button {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  border: 4px solid var(--primary-color);
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  min-width: 10rem;
+  margin: 1rem;
+  }
+  
+  .google-btn {
+  width: 184px;
+  height: 42px;
+  margin: 1rem;
+  background-color:var(--primary-color);
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .google-btn:hover {
+  opacity: 90%;
+  }
+ 
+  .google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+  border-color:var(--primary-color);
+  }
+
+  .google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -8px;
+  width: 18px;
+  height: 18px;
+  }
+
+  .login-btn-text {
+  float: right;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+  background-color: var(--primary-color);
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  border:none;
+  }
+  .button_cont {
+    margin-top:35px;
+  }

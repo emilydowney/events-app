@@ -66,6 +66,11 @@ input[type="number"],
   text-align: center;
 }
 
+.warning {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .suggestions {
   width: 250px;
   z-index: 2;
@@ -101,21 +106,6 @@ input[type="number"],
   box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.75);
 }
 
-button {
-  position: absolute;
-  margin: 10px;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  border-width: 0px;
-  outline: none;
-  background-color: var(--secondary-color);
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .details-btn:hover {
   opacity: 90%;
 }
@@ -130,17 +120,10 @@ button {
   font-size: 14px;
 }
 
-.button-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
 .alert {
   max-width: 250px;
   font-size: 11px;
+  margin: 0 auto;
 }
 
 .number {
@@ -181,43 +164,6 @@ div#numberInput.input-group {
   min-width: 10rem;
   margin: 1rem;
 }
-
-.google-btn {
-  width: 184px;
-  height: 42px;
-  margin: 1rem;
-  background-color: #4285f4;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.google-btn:hover {
-  box-shadow: 0 0 6px #4285f4;
-}
-.google-btn:active {
-  background: #1669f2;
-}
-.google-icon-wrapper {
-  position: absolute;
-  margin-top: 1px;
-  margin-left: 1px;
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
-  background-color: #fff;
-}
-.google-icon {
-  position: absolute;
-  margin-top: 11px;
-  margin-left: -8px;
-  width: 18px;
-  height: 18px;
-}
-.btn-text {
-  color: #fff;
-  font-size: 14px;
-}
-
-
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
