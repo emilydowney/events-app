@@ -34,13 +34,13 @@ h5 {
 
 .login {
   background-color: var(--tertiary-color);
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   border-radius: 5px;
   padding: 30px;
-  opacity: 100%;
   position: absolute;
   height: 100%;
   top: 0px;

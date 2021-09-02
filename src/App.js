@@ -3,12 +3,12 @@ import WelcomeScreen from './WelcomeScreen';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents.js';
+import { WarningAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import Logo from './eventlogo.png';
 
 import './nprogress.css';
 import './App.css';
-import { WarningAlert } from './Alert';
 
 class App extends Component {
   constructor(props) {
@@ -28,11 +28,8 @@ class App extends Component {
     const accessToken = localStorage.getItem('access_token');
     const isTokenValid = (await checkToken(accessToken)).error ? false : true;
     const searchParams = new URLSearchParams(window.location.search);
-    const code = searchParams.get('code');
-    this.setState({
-      showWelcomeScreen: !(code || isTokenValid)
-    })
-
+    const code = searchParams.get("code");
+    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
         if (this.mounted) {
@@ -40,7 +37,8 @@ class App extends Component {
             events: events.slice(0, this.state.numberOfEvents),
             locations: extractLocations(events)
           });
-        } if (!navigator.onLine) {
+        }
+        if (!navigator.onLine) {
           this.setState({
             warningText: 'There is a error with your network connection. Events may not be up to date.'
           })
@@ -64,7 +62,7 @@ class App extends Component {
         : events.filter(event => event.location === location);
       this.setState({
         events: locationEvents.slice(0, eventCount),
-        numberOfEvents: eventCount,
+        numberOfEvents: eventCount
       });
     });
   };
@@ -76,14 +74,14 @@ class App extends Component {
 
 
   render() {
-    if (this.state.showWelcomeScreen === undefined) return <div
-      className="App" />
     return (
       <div className="App">
         <div md="6" className="header">
           <img src={Logo} className="logo" alt="Logo"></img>
         </div>
+
         <WarningAlert className="warning" text={this.state.warningText} />
+
         <CitySearch
           locations={this.state.locations} updateEvents={this.updateEvents}
           numberOfEvents={this.state.numberOfEvents} />
