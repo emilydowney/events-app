@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ErrorAlert } from './Alert';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { FormGroup } from 'react-bootstrap';
 
 class NumberOfEvents extends Component {
   constructor(props) {
@@ -35,12 +36,14 @@ class NumberOfEvents extends Component {
       <InputGroup id="numberInput">
 
         <ErrorAlert text={this.state.errorText} />
-        <Form.Label className="number-label">Number of Events:</Form.Label><br />
-        <Form.Control
-          className="number"
-          type="number"
-          value={this.state.numberOfEvents}
-          onChange={e => this.handleChange(e)} />
+        <FormGroup>
+          <Form.Label className="number-label">Number of Events:</Form.Label><br />
+          <Form.Control
+            className="number"
+            type="number"
+            value={this.state.numberOfEvents}
+            onChange={e => this.handleChange(e)} />
+        </FormGroup>
 
 
       </InputGroup>

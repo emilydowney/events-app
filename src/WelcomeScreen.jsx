@@ -18,6 +18,7 @@ function WelcomeScreen(props) {
             </div>
           </div>
           <a href="https://emilydowney.github.io/events-app/privacy.html" rel="nofollow noopener">Privacy policy</a>
+          <a href="https://www.vecteezy.com/free-vector/location">Location Vectors by Vecteezy</a>
         </div>
       </div>
     )

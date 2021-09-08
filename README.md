@@ -1,69 +1,27 @@
-# Meet-App
+# Event Finder App
 A serverless, progressive web application (PWA) built using React. The app is created based on a
-test-driven development (TDD) technique.
+test-driven development (TDD) technique, and fetches calender events from the Google Calendar API. 
 
-# User Stories/Scenarios
-**Show/Hide an Event's Details**
+# Links
+A live deploy of the app can be found at https://emilydowney.github.io/events-app/
 
-As a user, I should be able to show or hide an event's details so that I can learn more about the event.
+API used: https://developers.google.com/calendar/api
 
-  * Scenario 1: An event element is collapsed by default.
-
-    Given the user hasn't selected an event,
-    When the user loads the page,
-    Then the event element is collapsed by default.
-
-  * Scenario 2: User can expand an event to see its details.
-
-    Given the event element is collapsed by default,
-    When the user clicks the element,
-    Then the event element will expand to show its details.
-
-  * Scenerio 3: User can collapse an event to hide its details.
-
-    Given the event element is expanded,
-    When the user clicks the element,
-    Then the event element will collapse to hide its details.
+# Features
+* The app uses OAuth2 authentication flow to allow the user to login.
+* Users can install the app on desktop or add to their mobile home screen.
+* App is available offline.
+* Users can sort through developer events by city and specify the number of events that show on screen.
+* Each event has a details button that, upon click, will reveal additional info about the event.
+* Renders two charts (pie and scatterplot), that compiles advanced data about the displayed events. 
 
 
-**Specify Number of Events**
-
-As a user, I should be able to specify the number of events so I can control the number of events I see.
-
-   * Scenario 1: When user hasn't specified a number, 32 is the default number.
-
-     Given the user hasn't specified a number,
-     When the user loads the page,
-     Then the default number of events will be 32.
-
-   * Scenario 2: User can change the number of events they want to see.
-
-     Given the user inputs a specific number,
-     When the events load,
-     Then the page will contain the number of events the user wants to see.
-
-**Use the App When Offline**
-
-As a user, I should be able to use the app when offline so that I can still look at events away from an internet connection.
-
-   * Scenario 1: Show cached data when there's no internet connection.
-
-     Given that there's no internet connection,
-     When the user uses the app,
-     Then the app will show cached data.
-
-   * Scenario 2: Show error when user changes the settings(city, time range)
-
-     Given that there's no internet connection,
-     When the user changes the settings,
-     Then an error message will be displayed.
-
-**Data Visualization**
-
-As a user, I should be able to access a chart containing the number of upcoming events in each city so that I can see which locations have the most/fewest events.
-
-   * Scenario 1: Show a chart with the number of upcoming events in each city.
-
-     Given that the user is searching for event data,
-     When the user goes to the data page,
-     Then a chart showing the number of upcoming events in each city will display.
+# Technologies Used
+HTML/CSS
+JavaScript
+React
+React-Bootstrap
+Jest
+Cucumber
+Puppeteer 
+Recharts

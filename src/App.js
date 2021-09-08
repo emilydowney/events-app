@@ -3,8 +3,10 @@ import WelcomeScreen from './WelcomeScreen';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents.js';
+import EventGenre from './EventGenre';
 import { WarningAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Logo from './eventlogo.png';
 
 import './nprogress.css';
@@ -72,6 +74,15 @@ class App extends Component {
     this.updateEvents(selectedLocation, newCount);
   }
 
+  getData = () => {
+    const { locations, events } = this.state;
+    const data = locations.map((location) => {
+      const number = events.filter((event) => event.location === location).length;
+      const city = location.split(', ').shift();
+      return { city, number };
+    })
+    return data;
+  }
 
   render() {
     return (
@@ -91,6 +102,30 @@ class App extends Component {
           numberOfEvents={this.state.numberOfEvents}
           changeCount={this.changeCount} />
 
+        <div className="data-vis-wrapper">
+          <EventGenre events={this.state.events} />
+
+          <ResponsiveContainer height={400}>
+            <ScatterChart
+              margin={{
+                top: 20, right: 20, bottom: 20, left: 20,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis
+                type="category"
+                dataKey="city"
+                name="City" />
+              <YAxis
+                type="number"
+                allowDecimals={false}
+                dataKey="number"
+                name="Number of Events" />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#F46A5F" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
 
         <EventList
           events={this.state.events} />
