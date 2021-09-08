@@ -17,11 +17,11 @@ API used: https://developers.google.com/calendar/api
 
 
 # Technologies Used
-HTML/CSS
-JavaScript
-React
-React-Bootstrap
-Jest
-Cucumber
-Puppeteer 
-Recharts
+* HTML/CSS
+* JavaScript
+* React
+* React-Bootstrap
+* Jest
+* Cucumber
+* Puppeteer 
+* Recharts
